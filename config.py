@@ -62,7 +62,7 @@ UPDATE_CHANNEL = 'https://t.me/bijoy_bhai_ff'
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
 # Railway/Render: attach a persistent disk at /data and set DATA_DIR=/data.
 # Local development falls back to the project directory.
-_DEFAULT_DATA_DIR = '/data' if os.path.isdir('/data') and os.access('/data', os.W_OK) else os.path.join(BASE_DIR, 'naruto_data')
+_DEFAULT_DATA_DIR = '/data' if os.path.isdir('/data') and os.access('/data', os.W_OK) else os.path.join(BASE_DIR, 'premium_data')
 DATA_DIR = os.path.abspath(os.environ.get('DATA_DIR') or _DEFAULT_DATA_DIR)
 UPLOAD_DIR = os.path.join(DATA_DIR, 'upload_bots')
 LOGS_DIR = os.path.join(DATA_DIR, 'logs')
@@ -73,7 +73,7 @@ for _d in [UPLOAD_DIR, DATA_DIR, LOGS_DIR, BACKUP_DIR]:
 
 # Safely migrate the old project-local runtime directory into a newly attached
 # persistent volume. Existing files on the volume are never overwritten.
-_LEGACY_DATA_DIR = os.path.join(BASE_DIR, 'naruto_data')
+_LEGACY_DATA_DIR = os.path.join(BASE_DIR, 'premium_data')
 if os.path.isdir(_LEGACY_DATA_DIR) and os.path.realpath(_LEGACY_DATA_DIR) != os.path.realpath(DATA_DIR):
     import shutil
     for _root, _dirs, _files in os.walk(_LEGACY_DATA_DIR):
@@ -108,7 +108,7 @@ if os.path.isdir(_LEGACY_UPLOAD_DIR) and os.path.realpath(_LEGACY_UPLOAD_DIR) !=
 # ═══════════════════════════════════════════════════
 #  BRANDING
 # ═══════════════════════════════════════════════════
-BRAND        = "🌟 NARUTO HOSTING PANEL"
+BRAND        = "🌟 PREMIUM VPS PANEL"
 BRAND_SHORT  = "MS"
 BRAND_VER    = "v6.0"
 BRAND_TAG    = f"{BRAND} {BRAND_VER}"
@@ -117,7 +117,7 @@ BRAND_FOOTER = f"\n━━━━━━━━━━━━━━━━━━━━\
 # ═══════════════════════════════════════════════════
 #  FORCE SUBSCRIBE
 # ═══════════════════════════════════════════════════
-DEFAULT_FORCE_CHANNELS = {'naruto6911': 'Developer Naruto Updates'}
+DEFAULT_FORCE_CHANNELS = {'bijoy_vai2': 'Developer Bijoy Updates'}
 
 # ═══════════════════════════════════════════════════
 #  PLAN LIMITS
